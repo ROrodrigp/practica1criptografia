@@ -37,4 +37,10 @@ print(filas)
 print(columnas)
 print(nuevospares)
 
+##Formar el mensaje en cifrado 
+for indice, elemento in enumerate(nuevospares):
+	print(indice)
+	print(nuevospares[indice])
+	print('\n')
+
 
