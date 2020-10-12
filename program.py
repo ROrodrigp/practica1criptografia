@@ -6,6 +6,7 @@ mensajecif=[]
 filas = []
 columnas = []
 nuevospares = []
+nuevalista = []
 ###ELIMINAR ESPACIOS EN MENSAJE E INSERTARLO EN UNA LISTA 
 mensaje = 'TRAVEL NORTH AT ONCE'
 
@@ -39,7 +40,7 @@ def cifrar(mensaje):
 	print(mensajecif)
 	print(filas)
 	print(columnas)
-	print(nuevospares,'\n\n\n')
+	print('nuevos pares : \n',nuevospares)
 	i = 0
 	j = 1
 	cifrado = ''
@@ -68,10 +69,50 @@ def descifrar(cifrado):
 			for elemento in fila: 
 				if cifrado[indice] == elemento:
 					print('{}{}'.format(fil,col))
+					filas.append(fil)
+					columnas.append(col)
+					nuevospares.append(fil)
+					nuevospares.append(col)
 				col += 1
 			col = 0
 			fil += 1
 		fil = 0 
+
+	dividir = int(len(nuevospares) / 2)
+	print(dividir)
+
+	lista1 = nuevospares[:dividir]
+	lista2 = nuevospares[dividir:]
+
+	print('\n\n\n')
+	print(lista1)
+	print('\n\n\n')
+	print(lista2)
+
+	for i,e  in enumerate(lista1):
+		nuevalista.append(e)
+		nuevalista.append(lista2[i])
+
+	descifrado = ''
+	for i,e in enumerate(nuevalista):
+		if i % 2 == 0: 
+			#print('\nletra cifrado: {}'.format(tableau[e][nuevalista[i+1]]))
+			descifrado = descifrado + tableau[e][nuevalista[i+1]]
+
+	print(nuevalista)
+
+	print(descifrado)
+
+
+
+
+
+	#print('filas : \n',filas)
+	#print('columnas: \n',columnas)
+	#print(nuevospares)
+
+	
+
 
 
 #cifrar('TRAVEL NORTH AT ONCE')
