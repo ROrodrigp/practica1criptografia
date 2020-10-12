@@ -36,11 +36,18 @@ print(mensajecif)
 print(filas)
 print(columnas)
 print(nuevospares)
-
+i = 0
+j = 1
 ##Formar el mensaje en cifrado 
 for indice, elemento in enumerate(nuevospares):
-	print(indice)
-	print(nuevospares[indice])
-	print('\n')
+	try:
+		print(indice)
+		print('{} {}'.format(nuevospares[i],nuevospares[j]))
+		print('\n')
+		i+= 2 
+		j += 2
+	except: 
+		break
+
 
 
