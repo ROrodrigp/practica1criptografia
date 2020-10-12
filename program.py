@@ -3,6 +3,9 @@ import fileinput
 
 tableau = [['E','N','C','R','Y'],['P','T','A','B','D'],['F','G','H','I','K'],['L','M','O','Q','S'],['U','V','W','X','Z']]
 mensajecif=[]
+filas = []
+columnas = []
+nuevospares = []
 ###ELIMINAR ESPACIOS EN MENSAJE E INSERTARLO EN UNA LISTA 
 mensaje = 'TRAVEL NORTH AT ONCE'
 mensaje2= list(mensaje.replace(" ",""))
@@ -21,11 +24,17 @@ for indice, numero in enumerate(mensaje2):
 					#print('{} {}\n'.format(fil,col))
 					clave = '{}{}'.format(fil,col)
 					mensajecif.append(clave)
+					filas.append(fil)
+					columnas.append(col)
+					nuevospares = filas + columnas
 				col+=1
 			col = 0 
 			fil+=1
 		fil = 0
 
 print(mensajecif)
+print(filas)
+print(columnas)
+print(nuevospares)
 
 
