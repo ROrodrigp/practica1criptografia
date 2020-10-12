@@ -35,7 +35,7 @@ for indice, numero in enumerate(mensaje2):
 print(mensajecif)
 print(filas)
 print(columnas)
-print(nuevospares)
+print(nuevospares,'\n\n\n')
 i = 0
 j = 1
 ##Formar el mensaje en cifrado 
@@ -43,10 +43,12 @@ for indice, elemento in enumerate(nuevospares):
 	try:
 		print(indice)
 		print('{} {}'.format(nuevospares[i],nuevospares[j]))
+		print('letra cifrada: {} '.format(tableau[nuevospares[i]][nuevospares[j]]))
 		print('\n')
 		i+= 2 
 		j += 2
 	except: 
+		print('error')
 		break
 
 
