@@ -13,7 +13,7 @@ mensaje = 'TRAVEL NORTH AT ONCE'
 
 ##RECORRER EL TABLEAU E IMPRIMIR NUMERO DE FILA Y COLUMNA 
 
-def cifrado(mensaje):
+def cifrar(mensaje):
 
 	mensaje2= list(mensaje.replace(" ",""))
 	print(mensaje2)
@@ -58,9 +58,24 @@ def cifrado(mensaje):
 			break
 
 	print(cifrado)
-	
 
-cifrado('TRAVEL NORTH AT ONCE')
+def descifrar(cifrado):
+	fil = 0 
+	col = 0 
+
+	for indice, numero in enumerate(cifrado):
+		for fila in tableau:
+			for elemento in fila: 
+				if cifrado[indice] == elemento:
+					print('{}{}'.format(fil,col))
+				col += 1
+			col = 0
+			fil += 1
+		fil = 0 
+
+
+#cifrar('TRAVEL NORTH AT ONCE')
+descifrar('LNLLFGPPNPGRSK')
 
 
 
