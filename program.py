@@ -38,18 +38,22 @@ print(columnas)
 print(nuevospares,'\n\n\n')
 i = 0
 j = 1
+cifrado = ''
 ##Formar el mensaje en cifrado 
 for indice, elemento in enumerate(nuevospares):
 	try:
 		print(indice)
 		print('{} {}'.format(nuevospares[i],nuevospares[j]))
 		print('letra cifrada: {} '.format(tableau[nuevospares[i]][nuevospares[j]]))
+		cifrado = cifrado + tableau[nuevospares[i]][nuevospares[j]]
 		print('\n')
 		i+= 2 
 		j += 2
 	except: 
 		print('error')
 		break
+
+print(cifrado)
 
 
 
