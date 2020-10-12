@@ -105,18 +105,29 @@ def descifrar(cifrado):
 
 
 
-
-
 	#print('filas : \n',filas)
 	#print('columnas: \n',columnas)
 	#print(nuevospares)
 
-	
-
-
-
 #cifrar('TRAVEL NORTH AT ONCE')
-descifrar('LNLLFGPPNPGRSK')
+#descifrar('LNLLFGPPNPGRSK')
+
+archivo = fileinput.input()
+leerlinea = archivo.readline()
+seleccion = leerlinea.rstrip('\n')
+if seleccion == 'ENCRYPT':
+	leerlinea = archivo.readline()
+	mensaje = leerlinea.rstrip('\n')
+	cifrar(mensaje)
+elif seleccion == 'DECRYPT':
+	leerlinea = archivo.readline()
+	cifrado = leerlinea.rstrip('\n')
+	descifrar(cifrado)
+else:
+	print('seleccion incorrecta')
+
+
+
 
 
 
