@@ -17,7 +17,7 @@ mensaje = 'TRAVEL NORTH AT ONCE'
 def cifrar(mensaje):
 
 	mensaje2= list(mensaje.replace(" ",""))
-	print(mensaje2)
+	#print(mensaje2)
 	indice = 0 
 	fil=0
 	col=0
@@ -37,25 +37,25 @@ def cifrar(mensaje):
 				fil+=1
 			fil = 0
 
-	print(mensajecif)
-	print(filas)
-	print(columnas)
-	print('nuevos pares : \n',nuevospares)
+	#print(mensajecif)
+	#print(filas)
+	#print(columnas)
+	#print('nuevos pares : \n',nuevospares)
 	i = 0
 	j = 1
 	cifrado = ''
 	##Formar el mensaje en cifrado 
 	for indice, elemento in enumerate(nuevospares):
 		try:
-			print(indice)
-			print('{} {}'.format(nuevospares[i],nuevospares[j]))
-			print('letra cifrada: {} '.format(tableau[nuevospares[i]][nuevospares[j]]))
+			#print(indice)
+			#print('{} {}'.format(nuevospares[i],nuevospares[j]))
+			#print('letra cifrada: {} '.format(tableau[nuevospares[i]][nuevospares[j]]))
 			cifrado = cifrado + tableau[nuevospares[i]][nuevospares[j]]
-			print('\n')
+			#print('\n')
 			i+= 2 
 			j += 2
 		except: 
-			print('error')
+			#print('error')
 			break
 
 	print(cifrado)
@@ -68,7 +68,7 @@ def descifrar(cifrado):
 		for fila in tableau:
 			for elemento in fila: 
 				if cifrado[indice] == elemento:
-					print('{}{}'.format(fil,col))
+					#print('{}{}'.format(fil,col))
 					filas.append(fil)
 					columnas.append(col)
 					nuevospares.append(fil)
@@ -79,15 +79,15 @@ def descifrar(cifrado):
 		fil = 0 
 
 	dividir = int(len(nuevospares) / 2)
-	print(dividir)
+	#print(dividir)
 
 	lista1 = nuevospares[:dividir]
 	lista2 = nuevospares[dividir:]
 
-	print('\n\n\n')
-	print(lista1)
-	print('\n\n\n')
-	print(lista2)
+	#print('\n\n\n')
+	#print(lista1)
+	#print('\n\n\n')
+	#print(lista2)
 
 	for i,e  in enumerate(lista1):
 		nuevalista.append(e)
@@ -99,7 +99,7 @@ def descifrar(cifrado):
 			#print('\nletra cifrado: {}'.format(tableau[e][nuevalista[i+1]]))
 			descifrado = descifrado + tableau[e][nuevalista[i+1]]
 
-	print(nuevalista)
+	#print(nuevalista)
 
 	print(descifrado)
 
