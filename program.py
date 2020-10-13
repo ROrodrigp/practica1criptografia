@@ -72,17 +72,11 @@ def descifrar(cifrado):
 	for i,e in enumerate(nuevalista):
 		if i % 2 == 0: 
 			descifrado = descifrado + tableau[e][nuevalista[i+1]]
-			
+
 	print(descifrado)
 
 
 
-	#print('filas : \n',filas)
-	#print('columnas: \n',columnas)
-	#print(nuevospares)
-
-#cifrar('TRAVEL NORTH AT ONCE')
-#descifrar('LNLLFGPPNPGRSK')
 
 archivo = fileinput.input()
 leerlinea = archivo.readline()
